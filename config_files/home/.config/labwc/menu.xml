@@ -670,6 +670,11 @@
 				<command>foot -w 1024x960 -H sh -c "sudo cfdisk"</command>
 			</action>
 		</item>	
+		<item label="Update Grub">
+			<action name="Execute">
+				<command>foot -w 800x600 -H sh -c "sudo update-grub"</command>
+			</action>
+		</item>	
 		<item label="Show paths ">
 			<action name="Execute">
 				<command>foot -w 800x600 -H sh -c "echo $PATH"</command>
@@ -752,10 +757,10 @@
 			<action name="Exit"/>
 		</item>	
 		<item label="Reboot">
-			<action name="Execute" command="sreboot.sh" />	
+			<action name="Execute" command="sreboot" />	
 		</item>	
 		<item label="Shutdown">
-			<action name="Execute" command="sshutdown.sh" />
+			<action name="Execute" command="sshutdown" />
 		</item>	
 	</menu>
 	
