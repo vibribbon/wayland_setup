@@ -1,0 +1,10 @@
+
+# Give user permissions to shutdown and reboot.
+# vibri ALL = NOPASSWD: /sbin/poweroff, /sbin/reboot
+
+# alias for shutdown commands
+Cmnd_Alias POWER = /sbin/poweroff, /sbin/reboot
+# users allowed (after the =)
+Cmnd_Alias POWERGROUP = vibri
+POWERGROUP ALL = POWER
+

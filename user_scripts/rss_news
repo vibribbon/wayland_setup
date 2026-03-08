@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Download the rss files from their respective websites
+curl -s -o "${HOME}/.cache/rss_reader/bbc.xml" --create-dirs -L https://feeds.bbci.co.uk/news/uk/rss.xml
+curl -s -o "${HOME}/.cache/rss_reader/verge.xml" --create-dirs -L https://www.theverge.com/rss/index.xml
+curl -s -o "${HOME}/.cache/rss_reader/gol.xml" --create-dirs -L https://www.gamingonlinux.com/article_rss.php
+curl -s -o "${HOME}/.cache/rss_reader/ns.xml" --create-dirs -L https://www.newscientist.com/section/news/feed/
+curl -s -o "${HOME}/.cache/rss_reader/polygon.xml" --create-dirs -L https://www.polygon.com/rss/index.xml
+sleep 1.5
+
+
+# Combine the rss files together using uniform format
+truncate -s 0 ~/.cache/rss_reader/rss_all.txt
+
+echo '-- COMMANDS q(quit) arrow keys(scroll) PGUP/PGDN /(search)  ------' >> ~/.cache/rss_reader/rss_all.txt
+echo '------------------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+echo '-- BBC NEWS ------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+# enter the date into the file
+grep '<lastBuildDate>' ~/.cache/rss_reader/bbc.xml | sed 's/        <lastBuildDate>//g' | sed 's/<\/lastBuildDate>//g' | head -n 1 >> ~/.cache/rss_reader/rss_all.txt
+# pull the article line
+grep "<title>" ~/.cache/rss_reader/bbc.xml | sed 's/<title><!\[CDATA\[/\|- /g' | sed 's/\]\]><\/title>//g' | sed -e 's/^[ \t]*//g' | grep -v 'BBC News' | head -n 12 >> ~/.cache/rss_reader/rss_all.txt
+
+
+echo '------------------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+echo '-- VERGE ---------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+# enter the date into the file
+grep -m 1 '<updated>' ~/.cache/rss_reader/verge.xml | sed 's/<updated>//g' | sed 's/<\/updated>//g' | sed -e 's/^[ \t]*//' >> ~/.cache/rss_reader/rss_all.txt
+# pull the article line
+grep '^\s*<title type="html"><!\[CDATA\[' ~/.cache/rss_reader/verge.xml | sed 's/<title type="html"><!\[CDATA\[/\|- /g' | sed 's/]]><\/title>//g' | sed -e 's/^[ \t]*//' | head -n 12 >> ~/.cache/rss_reader/rss_all.txt
+
+
+echo '------------------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+echo '-- NEW SCIENTIST -------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+# enter the date into the file
+grep -m 1 '<pubDate>' ~/.cache/rss_reader/ns.xml | sed 's/            <pubDate>//g' | sed 's/<\/pubDate>//g' >> ~/.cache/rss_reader/rss_all.txt
+# pull the article line
+grep -v 'New Scientist - News' ~/.cache/rss_reader/ns.xml | grep "<title>"  | sed 's/            <title>/\|- /g' | sed 's/<\/title>//g' | head -n 12 >> ~/.cache/rss_reader/rss_all.txt
+
+
+echo '------------------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+echo '-- POLYGON GAMING ------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+# enter the date into the file
+grep -m 1 '<lastBuildDate>' ~/.cache/rss_reader/polygon.xml | sed 's/<lastBuildDate>//g' | sed 's/<\/lastBuildDate>//g' | sed -e 's/^[ \t]*//'  >> ~/.cache/rss_reader/rss_all.txt
+# pull the article line
+grep -v '^\]' ~/.cache/rss_reader/polygon.xml | grep -v '<' | grep -v '>' | grep -v 'xmlns' | grep -v '^[[:space:]]*$' | sed -e 's/^[ \t]*/\|- /g' | head -n 12 >> ~/.cache/rss_reader/rss_all.txt
+
+
+echo '------------------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+echo '-- GAMING ON LINUX -----------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+# enter the date into the file
+grep '<pubDate>' ~/.cache/rss_reader/gol.xml | sed 's/.*<pubDate>//g' | sed 's/<\/pubDate>.*//g' | sed -e 's/^[ \t]*//'  >> ~/.cache/rss_reader/rss_all.txt
+# pull the article line
+sed -e 's/<description>/\
+|- /g' -e 's/<\/description>/\
+/g' < ~/.cache/rss_reader/gol.xml | grep -v '<' | grep -v 'The latest articles from GamingOnLinux' | sed 's/.&lt;p&gt.*//g' | sed 's/&quot;//g' | head -n 12 >> ~/.cache/rss_reader/rss_all.txt
+echo '------------------------------------------------------------------' >> ~/.cache/rss_reader/rss_all.txt
+
+# Present the output back using less
+fold -s -w200 ~/.cache/rss_reader/rss_all.txt | less

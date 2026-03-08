@@ -1,0 +1,765 @@
+<!-- foot options
+	windows size:	-w 1024x960 / 1280x720 / 800x600
+	hold window open:	-H
+	run command:	sh -c ""
+-->
+
+
+<openbox_menu>
+<!-- Note: for localization support of menu items "client-menu" has to be removed here -->
+<menu id="client-menu">
+	<item label="Minimize">
+		<action name="Iconify" />
+	</item>
+	<item label="Maximize">
+		<action name="ToggleMaximize" />
+	</item>
+	<item label="Fullscreen">
+		<action name="ToggleFullscreen" />
+	</item>
+	<item label="Roll Up/Down">
+		<action name="ToggleShade" />
+	</item>
+	<item label="Decorations">
+		<action name="ToggleDecorations" />
+	</item>
+	<item label="Always on Top">
+		<action name="ToggleAlwaysOnTop" />
+	</item>
+	<!--
+		Any menu with the id "workspaces" will be hidden
+		if there is only a single workspace available.
+	-->
+	<!--
+		<menu id="client-send-to-menu"/>
+	
+		openbox default workspace selector
+		to use replace above workspace menu with the example below
+		the label is required, but you can change the text.
+		<menu id="client-send-to-menu" label="Send to..." />
+	-->
+	<item label="Close">
+		<action name="Close" />
+	</item>
+</menu>
+
+
+<menu id="root-menu">
+	<!-- Make client-list-combined-menu a submenu of root-menu
+	You must supply a label or it will not appear in root-menu -->
+	<!--
+	<menu id="client-list-combined-menu" label="Running..." />
+	-->
+	<item label="Terminal">
+		<action name="Execute" command="foot" />
+	</item>
+	<item label="File Manager">
+		<action name="Execute" command="pcmanfm" />
+	</item>
+	<item label="Web Browser">
+		<action name="Execute" command="firefox" />
+	</item>
+	<item label="Text Editor">
+		<action name="Execute" command="geany" />
+	</item>
+	<item label="Search">
+		<action name="Execute" command="fsearch" />
+	</item>
+	<item label="Weather">
+		<action name="Execute">
+			<command>foot -w 800x300 -H sh -c "weather"</command>
+		</action>
+	</item>
+	<item label="Calendar">
+		<action name="Execute" command="gsimplecal" />
+	</item>
+	<item label="Rss">
+		<action name="Execute">
+			<command>foot -w 1600x960 -H sh -c "rss_news"</command>
+		</action>
+	</item>
+
+	<menu id="m_speaker" label="Volume Speakers">
+		<item label="Mute / Unmute Speakers">
+			<action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+		</item>
+		<separator />
+		<item label="Voume 100%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 1" />
+		</item>
+		<item label="Voume 75%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 0.75" />
+		</item>
+		<item label="Voume 50%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 0.5" />
+		</item>
+		<item label="Voume 25%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 0.25" />
+		</item>
+		<separator />
+		<item label="Voume +10%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 10%+" />
+		</item>
+		<item label="Voume -10%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 10%-" />
+		</item>
+	</menu>
+	
+	<menu id="m_mic" label="Volume Mic">
+		<item label="Mute / Unmute Mic">
+			<action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" />
+		</item>
+		<separator />
+		<item label="Voume 100%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SOURCE@ 1" />
+		</item>
+		<item label="Voume 75%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SOURCE@ 0.75" />
+		</item>
+		<item label="Voume 50%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SOURCE@ 0.5" />
+		</item>
+		<item label="Voume 25%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SOURCE@ 0.25" />
+		</item>
+		<separator />
+		<item label="Voume +10%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SOURCE@ 10%+" />
+		</item>
+		<item label="Voume -10%">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SOURCE@ 10%-" />
+		</item>
+	</menu>
+	
+	<item label="Process Explorer">
+		<action name="Execute">
+			<command>foot -w 1024x960 "htop"</command>
+		</action>
+	</item>	
+	
+	<separator />
+
+
+	<menu id="m_apps" label="Apps">
+		<item label="Terminal">
+			<action name="Execute" command="foot" />
+		</item>
+		
+		<separator />
+		
+		<item label="Pcmanfm (file manager)">
+			<action name="Execute" command="pcmanfm" />
+		</item>
+		<item label="Ranger (file manager)">
+			<action name="Execute">
+				<command>foot -w 1024x960 "ranger"</command>
+			</action>
+		</item>
+		<item label="Fsearch (file search)">
+			<action name="Execute" command="fsearch" />
+		</item>
+		<item label="Engrampa (compression)">
+			<action name="Execute" command="engrampa" />
+		</item>	
+		<item label="Peazip* (compression)">
+			<action name="Execute" command="flatpak run io.github.peazip.PeaZip" />
+		</item>		
+		
+		<separator />
+		
+		<item label="Firefox (browser)">
+			<action name="Execute" command="firefox" />
+		</item>
+		<item label="Discord* (comms)">
+			<action name="Execute" command="flatpak run com.discordapp.Discord" />
+		</item>
+		<item label="Transmission (downloads)">
+			<action name="Execute" command="transmission-gtk" />
+		</item>
+		
+		<separator />
+		
+		<item label="Geany (text editor)">
+			<action name="Execute" command="geany" />
+		</item>
+		<item label="R Studio (R dev)">
+			<action name="Execute" command="rstudio" />
+		</item>
+		<item label="Vim">
+			<action name="Execute" command="vim" />
+		</item>
+		<item label="Github">
+			<action name="Execute" command="firefox https://github.com/" />
+		</item>
+		
+		<separator />
+		
+		<item label="LO Writer (word processor)">
+			<action name="Execute" command="libreoffice --writer" />
+		</item>
+		<item label="LO Calc (spreadsheet)">
+			<action name="Execute" command="libreoffice --calc" />
+		</item>
+		<item label="LO Impress (slide decks)">
+			<action name="Execute" command="libreoffice --impress" />
+		</item>
+		<item label="Google Apps (suite)">
+			<action name="Execute" command="firefox https://drive.google.com/" />
+		</item>
+		<item label="Slides (slide decks)">
+			<action name="Execute" command="https://slides.com/#features" />
+		</item>
+		<item label="Scribus (DTP)">
+			<action name="Execute" command="scribus" />
+		</item>
+		<item label="Dia (diagrams)">
+			<action name="Execute" command="dia" />
+		</item>
+		<item label="Diagrams.net (diagrams)">
+			<action name="Execute" command="firefox https://app.diagrams.net" />
+		</item>
+		<item label="Zathura (pdf reader)">
+			<action name="Execute" command="zathura" />
+		</item>
+		<item label="Calibre (ebooks)">
+			<action name="Execute" command="calibre" />
+		</item>
+		<item label="Thunderbird (email)">
+			<action name="Execute" command="thunderbird" />
+		</item>
+		<item label="Calcurse (calendar)">
+			<action name="Execute">
+				<command>foot -w 1920x1080 sh -c "calcurse"</command>
+			</action>
+		</item>
+		<item label="LO Math (forumula editor)">
+			<action name="Execute" command="libreoffice --math" />
+		</item>
+		<item label="Normcap* (ocr)">
+			<action name="Execute" command="flatpak run com.github.dynobo.normcap" />
+		</item>
+		<item label="Witeboard (ocr)">
+			<action name="Execute" command="firefox https://witeboard.com" />
+		</item>
+		<item label="Mate Calc (calculator)">
+			<action name="Execute" command="mate-calc" />
+		</item>
+		<item label="Bc (calculator)">
+			<action name="Execute">
+				<command>foot -w 640x480 sh -c "bc"</command>
+			</action>
+		</item>
+		
+		<separator />
+		
+		<item label="Gimp (photo editor)">
+			<action name="Execute" command="gimp" />
+		</item>
+		<item label="Photopea (photo editor)">
+			<action name="Execute" command="firefox https://www.photopea.com/" />
+		</item>
+		<item label="Krita (painting)">
+			<action name="Execute" command="krita" />
+		</item>
+		<item label="Darktable (Photo management)">
+			<action name="Execute" command="darktable" />
+		</item>
+		<item label="Inkscape (drawing)">
+			<action name="Execute" command="inkscape" />
+		</item>
+		<item label="LO Draw (drawing)">
+			<action name="Execute" command="libreoffice --draw" />
+		</item>
+		<item label="Audacity (audio editor)">
+			<action name="Execute" command="audacity" />
+		</item>
+		<item label="Clementine (music player)">
+			<action name="Execute" command="clementine" />
+		</item>
+		<item label="Deadbeef (music player)">
+			<action name="Execute" command="deadbeef" />
+		</item>
+		<item label="Moc (music player)">
+			<action name="Execute">
+				<command>foot -w 800x600 sh -c "mocp"</command>
+			</action>
+		</item>
+		<item label="Shotcut (video editor)">
+			<action name="Execute" command="shotcut" />
+		</item>
+		<item label="Handbrake (video encoding)">
+			<action name="Execute" command="handbrake" />
+		</item>
+		<item label="Vlc (video player)">
+			<action name="Execute" command="vlc" />
+		</item>
+		<item label="Mpv (video player)">
+			<action name="Execute" command="mpv" />
+		</item>
+		<item label="Blender (3d modelling)">
+			<action name="Execute" command="blender" />
+		</item>
+		<item label="OBS Studio (screen record)">
+			<action name="Execute" command="obs-studio" />
+		</item>
+		<item label="Drum Machine*">
+			<action name="Execute" command="flatpak run io.github.revisto.drum-machine" />
+		</item>
+		<item label="LMMS (DAW)">
+			<action name="Execute" command="lmms" />
+		</item>
+		
+		<separator />
+		
+		<item label="Steam (gaming)">
+			<action name="Execute" command="steam" />
+		</item>
+		<item label="Lutris* (gaming)">
+			<action name="Execute" command="flatpak run net.lutris.Lutris" />
+		</item>
+		<item label="ProtonUpQt* (proton manager)">
+			<action name="Execute" command="flatpak run net.davidotek.pupgui2" />
+		</item>
+				
+		<separator />
+		
+		<item label="Bleachbit (cleanup)">
+			<action name="Execute" command="bleachbit" />
+		</item>
+		
+	</menu>
+	
+
+	<menu id="m_places" label="Places">
+		<item label="/home/">
+			<action name="Execute">
+				<command>pcmanfm ~/</command>
+			</action>
+		</item>
+		<item label="/mnt/">
+			<action name="Execute">
+				<command>pcmanfm /mnt/</command>
+			</action>
+		</item>
+		<item label="/etc/">
+			<action name="Execute">
+				<command>pcmanfm /etc/</command>
+			</action>
+		</item>
+		<item label="/usr/local/bin/">
+			<action name="Execute">
+				<command>pcmanfm /usr/local/bin/</command>
+			</action>
+		</item>
+	</menu>
+	
+	<separator />
+
+	
+	<!-- show the OS components menu -->
+	<menu id="m_os" label="OS">
+		<item label="Update settings">
+			<action name="Reconfigure" />
+		</item>
+		
+		<separator />
+		
+		<item label="Pcinfo">
+			<action name="Execute">
+				<command>foot -w 1400x400 -H sh -c "pcinfo.sh"</command>
+			</action>
+		</item>	
+		<item label="Add monitor (conky)">
+			<action name="Execute" command="conky" />
+		</item>
+		<item label="Add taskbar (yambar)">
+			<action name="Execute" command="yambar" />
+		</item>
+		<item label="Add virtual KB (wvkbd)">
+			<action name="Execute" command="wvkbd-mobintl" />
+		</item>
+		
+		<separator />
+		
+		<item label="Themes">
+			<action name="Execute" command="nwg-look" />
+		</item>
+		<item label="List networks">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "nmcli dev"</command>
+			</action>
+		</item>
+		
+		<separator />
+		
+		<item label="Mount 500gb shared">
+			<action name="Execute">
+				<command>foot -w 800x600 sh -c "sudo mount -t ext4 /dev/sdb1 /mnt/m_shared_500gb/"</command>
+			</action>
+		</item>
+		
+		<menu id="m_eject_device" label="Eject media">
+			<item label="Eject sdb1">
+				<action name="Execute">
+					<command>foot -w 800x600 -H sh -c "sudo umount /dev/sdb1"</command>
+				</action>
+			</item>
+			<item label="Eject sdc1">
+				<action name="Execute">
+					<command>foot -w 800x600 -H sh -c "sudo umount /dev/sdc1"</command>
+				</action>
+			</item>
+			<item label="Eject sdd1">
+				<action name="Execute">
+					<command>foot -w 800x600 -H sh -c "sudo umount /dev/sdd1"</command>
+				</action>
+			</item>
+		</menu>
+			
+		<separator />
+		
+		<item label="Show installed apps">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "list_manual_apps"</command>
+			</action>
+		</item>
+		<item label="Show installed flatpaks">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "flatpak list"</command>
+			</action>
+		</item>
+		
+		<separator />
+		
+		
+		<!-- clear caches -->
+		<item label="Clear caches (free RAM)">
+			<action name="Execute">
+				<command>foot -w 1024x960 sh -c "sudo sync &amp;&amp; echo 3 | sudo tee /proc/sys/vm/drop_caches"</command>
+			</action>
+		</item>
+		
+		<!-- kill process -->
+		<item label="Kill current window">
+			<action name="Kill" />
+		</item> 
+	</menu>
+	
+
+	<!-- show the diagnostic menu -->
+	<menu id="m_diag" label="Diagnostic">
+		
+		<!-- general -->
+		<item label="Process Explorer">
+			<action name="Execute">
+				<command>foot -w 1024x960 "htop"</command>
+			</action>
+		</item>	
+		<item label="Memory Usage">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "free -m -w -t"</command>
+			</action>
+		</item>
+		<item label="Memory Usage Continuous">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "free -m -L -s 5"</command>
+			</action>
+		</item>
+		<item label="GPU Usage">
+			<action name="Execute">
+				<command>foot -w 1024x600 "nvtop"</command>
+			</action>
+		</item>
+		<item label="GPU Overclock*">
+			<action name="Execute">
+				<command>flatpak run io.github.ilya_zlobintsev.LACT</command>
+			</action>
+		</item>
+		<item label="Power Usage">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo powertop"</command>
+			</action>
+		</item>	
+		<item label="Temperature">
+			<action name="Execute">
+				<command>foot -w 1920x1080 s-tui</command>
+			</action>
+		</item>	
+		<separator />
+		
+		<!-- network -->
+		<item label="Network details">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "ip -s address"</command>
+			</action>
+		</item>
+		<item label="Network Connections">
+			<action name="Execute">
+				<command>foot -w 800x600 sh -c "sudo iftop -B -P"</command>
+			</action>
+		</item>	
+		<item label="Network Bandwidth">
+			<action name="Execute">
+				<command>foot -w 800x600 sh -c "sudo nethogs -C -a"</command>
+			</action>
+		</item>
+		<item label="Internet Speed (fast.com)">
+			<action name="Execute">
+				<command>firefox https://fast.com/en/gb/</command>
+			</action>
+		</item>
+		<item label="Nmap (port scanner)">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo nmap localhost -p- -A -sS -sU"</command>
+			</action>
+		</item>
+		<separator />
+		
+		<!-- storage -->
+		<item label="HDD Usage">
+			<action name="Execute">
+				<command>foot -w 800x600 sh -c "ncdu /"</command>
+			</action>
+		</item>	
+		<item label="Mountpoints">
+			<action name="Execute">
+				<command>foot -w 800x600 -H sh -c "lsblk"</command>
+			</action>
+		</item>	
+		<item label="HDD io">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo iotop"</command>
+			</action>
+		</item>	
+		<item label="Open files">
+			<action name="Execute">
+				<command>foot -w 1920x1080 -H sh -c "lsof"</command>
+			</action>
+		</item>
+		<separator />
+		
+		<!-- other -->
+		<item label="Active users">
+			<action name="Execute">
+				<command>foot -w 800x600 -H sh -c "w"</command>
+			</action>
+		</item>	
+		
+		<separator />
+		
+		<menu id="m_logs" label="System Logs">
+			<item label="Log - All last 24hrs">
+				<action name="Execute">
+					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -o short-full --since '1 days ago'"</command>
+				</action>
+			</item>
+			<item label="Log - Last 20 errors">
+				<action name="Execute">
+					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -n 20 -o short-full --priority=0..3"</command>
+				</action>
+			</item>
+			<item label="Log - Last 20 warnings">
+				<action name="Execute">
+					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -n 20 -o short-full --priority=4"</command>
+				</action>
+			</item>
+			<item label="Log - boot">
+				<action name="Execute">
+					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -b -o short-full"</command>
+				</action>
+			</item>
+			<item label="Log - kernel">
+				<action name="Execute">
+					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -k -o short-full"</command>
+				</action>
+			</item>
+			<item label="Log - real time">
+				<action name="Execute">
+					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -f -o short-full"</command>
+				</action>
+			</item>
+		</menu>	
+	</menu>
+
+
+	<menu id="m_services" label="Services">
+		<item label="Services list">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo systemctl list-unit-files"</command>
+			</action>
+		</item>
+		<item label="Firewall (gufw)">
+			<action name="Execute">
+				<command>sudo run_gufw</command>
+			</action>
+		</item>
+		<item label="Virus scanner (clamtk)">
+			<action name="Execute">
+				<command>clamtk</command>
+			</action>
+		</item>
+		<item label="Timeshift (backup)">
+			<action name="Execute">
+				<command>timeshift</command>
+			</action>
+		</item>
+		<item label="Wireplumber audio">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "wpctl status"</command>
+			</action>
+		</item>
+		<item label="Printers (cups)">
+			<action name="Execute" command="firefox http://localhost:631" />
+		</item>
+		<item label="Virtualbox (virtualisation)">
+			<action name="Execute" command="virtualbox" />
+		</item>
+		<item label="Start sql server (mariadb)">
+			<action name="Execute" command="None" />
+		</item>
+		<item label="Start www server (apache)">
+			<action name="Execute" command="None" />
+		</item>
+		<item label="Start ai llm (ollama)">
+			<action name="Execute" command="None" />
+		</item>
+		
+		<separator />
+		
+		<!-- Power settings -->
+		<item label="Power - ac mode">
+			<action name="Execute" command="tlp ac" />
+		</item>
+		<item label="Power - battery mode">
+			<action name="Execute" command="tlp bat" />
+		</item>
+
+	</menu>
+
+
+	<menu id="m_config" label="Config">
+		<item label="Wdisplays">
+			<action name="Execute" command="wdisplays" />
+		</item>
+		<menu id="m_res" label="Resolution">
+			<item label="3840x2160">
+				<action name="Execute" command="wlr-randr --output HDMI-A-1 --mode 3840x2160" />
+			</item>
+			<item label="2560x1440">
+				<action name="Execute" command="wlr-randr --output HDMI-A-1 --mode 2560x1440" />
+			</item>
+			<item label="1920x1080">
+				<action name="Execute" command="wlr-randr --output HDMI-A-1 --mode 1920x1080" />
+			</item>
+			<item label="1280x720">
+				<action name="Execute" command="wlr-randr --output HDMI-A-1 --mode 1280x720" />
+			</item>
+			<item label="800x600">
+				<action name="Execute" command="wlr-randr --output HDMI-A-1 --mode 800x600" />
+			</item>
+			<item label="640x480">
+				<action name="Execute" command="wlr-randr --output HDMI-A-1 --mode 640x480" />
+			</item>
+		</menu>
+		
+		<item label="Partition manager (gnome-disks)">
+			<action name="Execute" command="gnome-disks" />
+		</item>
+		<item label="Partition manager (cfdisk)">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo cfdisk"</command>
+			</action>
+		</item>	
+		<item label="Show paths ">
+			<action name="Execute">
+				<command>foot -w 800x600 -H sh -c "echo $PATH"</command>
+			</action>
+		</item>	
+				
+		<separator />
+		
+		<!-- user side configs -->
+		<item label="Edit labwc menu">
+			<action name="Execute" command="geany ~/.config/labwc/menu.xml" />
+		</item>
+		<item label="Edit labwc keybinds">
+			<action name="Execute" command="geany ~/.config/labwc/rc.xml" />
+		</item>
+		<item label="Edit labwc autostart">
+			<action name="Execute" command="geany ~/.config/labwc/autostart" />
+		</item>
+		<item label="Edit labwc shutdown">
+			<action name="Execute" command="geany ~/.config/labwc/shutdown" />
+		</item>
+		<item label="Edit bashrc">
+			<action name="Execute" command="geany ~/.bashrc" />
+		</item>
+		
+		<!-- root side configs -->
+		<item label="Edit mounts - fstab">
+			<action name="Execute" command="foot -w 800x600 sudo nano /etc/fstab" />
+		</item>
+		<item label="Edit networks - hosts">
+			<action name="Execute" command="foot -w 800x600 sudo nano /etc/hosts" />
+		</item>
+		<item label="Edit apt sources - sources.list">
+			<action name="Execute" command="foot -w 800x600 sudo nano /etc/apt/sources.list" />
+		</item>
+		<item label="Edit users - passwd">
+			<action name="Execute" command="foot -w 800x600 sudo nano /etc/passwd" />
+		</item>
+		<item label="Edit groups - group">
+			<action name="Execute" command="foot -w 800x600 sudo nano /etc/group" />
+		</item>
+		
+		<separator />
+		
+		<!-- documentation -->
+		<item label="Labwc docs">
+			<action name="Execute" command="firefox https://labwc.github.io/manual.html" />
+		</item>
+	</menu>
+	
+
+	<menu id="m_updates" label="Updates">
+		<item label="Repos + kernel + flatpak">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo apt-get update &amp;&amp; sudo apt-get --with-new-pkgs upgrade &amp;&amp; sudo apt-get autoclean &amp;&amp; sudo apt-get autoremove &amp;&amp; sudo flatpak update &amp;&amp; echo '--UPDATES COMPLETE--'"</command>
+			</action>
+		</item>
+		<item label="Repos + flatpak">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo apt-get update &amp;&amp; sudo apt-get upgrade &amp;&amp; sudo apt-get autoclean &amp;&amp; sudo apt-get autoremove &amp;&amp; sudo flatpak update &amp;&amp; echo '--UPDATES COMPLETE--'"</command>
+			</action>
+		</item>
+		<item label="Flatpak only">
+			<action name="Execute">
+				<command>foot -w 1024x960 -H sh -c "sudo flatpak update &amp;&amp; echo '--UPDATES COMPLETE--'"</command>
+			</action>
+		</item>
+	</menu>	
+
+
+	<separator />
+	
+	
+	<item label="Lock">
+		<action name="Execute" command="swaylock" />
+	</item>  
+	
+	<menu id="m_power" label="Power">
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>	
+		<item label="Reboot">
+			<action name="Execute" command="sreboot.sh" />	
+		</item>	
+		<item label="Shutdown">
+			<action name="Execute" command="sshutdown.sh" />
+		</item>	
+	</menu>
+	
+</menu>
+
+
+</openbox_menu>

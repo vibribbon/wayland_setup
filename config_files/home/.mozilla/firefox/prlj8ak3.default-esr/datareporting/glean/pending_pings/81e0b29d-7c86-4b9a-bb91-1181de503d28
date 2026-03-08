@@ -1,0 +1,3 @@
+/submit/firefox-desktop/quick-suggest-deletion-request/1/81e0b29d-7c86-4b9a-bb91-1181de503d28
+{"ping_info":{"seq":0,"start_time":"2026-02-22T09:26:01.133+00:00","end_time":"2026-02-22T09:30:26.749+00:00"},"client_info":{"telemetry_sdk_build":"64.3.1","build_date":"1970-01-01T00:00:00+00:00","app_build":"20260106170501","os":"Linux","app_display_version":"140.7.0esr","architecture":"x86_64","locale":"en-US","app_channel":"esr","os_version":"6.12"},"metrics":{"uuid":{"quick_suggest.context_id":"6769a068-50b0-42f2-8213-0771726704a6"}}}
+{"headers":{},"body_has_info_sections":true,"ping_name":"quick-suggest-deletion-request","uploader_capabilities":[]}

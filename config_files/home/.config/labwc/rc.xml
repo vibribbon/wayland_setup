@@ -1,0 +1,283 @@
+<!--
+	This is a very simple config file with many options missing. For a complete
+	set of options with comments, see docs/rc.xml.all
+	
+	Key References
+	S (shift)
+	C (control)
+	A or Mod1 (alt)
+	H or Mod3 (hyper)
+	W or Mod4 (super / logo)
+	M or Mod5 (meta)
+	
+	DEFAULT BINDS (SET WITH <default />)
+	A-Tab - next window
+	A-S-Tab - previous window
+	W-Return - lab-sensible-terminal
+	A-F4 - close window
+	W-a - toggle maximize
+	W-<arrow> - resize window to fill half or quarter of the output
+	A-Space - show window menu (current window)
+-->
+
+
+<labwc_config>
+	
+	<theme>
+		<!-- <name>Clearlooks-3.4</name> -->
+		<name>raven-cyan</name>
+		<cornerRadius>8</cornerRadius>
+		<font name="sans" size="10" />
+	</theme>
+	
+	
+	<!-- windows placement -->
+	<placement>
+		<policy>automatic</policy>
+		<!--
+			When <placement><policy> is "cascade", the offset for cascading new
+			windows can be overwritten like this:
+			<cascadeOffset x="40" y="30" />
+		-->
+	</placement>
+	
+	
+	<!-- settings for the alt-tab menu -->
+	<windowSwitcher preview="yes" outlines="yes" unshade="yes">
+		<osd show="yes" style="thumbnail" output="all" thumbnailLabelFormat="%T" />
+		<!-- below are the fields in the popup menu -->
+		<fields>
+			<field content="desktop_entry_name" width="25%" />
+			<field content="title" width="75%" />
+		</fields>
+	</windowSwitcher>
+	
+	<!-- define screen areas for binds -->
+	<regions>
+		<region name="top-left"     x="0%"  y="0%"  height="50%"  width="50%"  />
+		<region name="top"          x="0%"  y="0%"  height="50%"  width="100%" />
+		<region name="top-right"    x="50%" y="0%"  height="50%"  width="50%"  />
+		<region name="left"         x="0%"  y="0%"  height="100%" width="50%"  />
+		<region name="center"       x="10%" y="10%" height="80%"  width="80%"  />
+		<region name="right"        x="50%" y="0%"  height="100%" width="50%"  />
+		<region name="bottom-left"  x="0%"  y="50%" height="50%"  width="50%"  />
+		<region name="bottom"       x="0%"  y="50%" height="50%"  width="100%" />
+		<region name="bottom-right" x="50%" y="50%" height="50%"  width="50%"  />
+		<region name="thirds-left"  x="0%"  y="0%" height="100%"  width="33%"  />
+		<region name="thirds-middle"       x="33%"  y="0%" height="100%"  width="33%" />
+		<region name="thirds-right" x="66%" y="0%" height="100%"  width="33%"  />
+		<region name="middle" x="33%" y="45%" height="25%"  width="25%"  />
+	</regions>
+	
+	
+	<keyboard>
+		<!-- <default /> -->
+		
+		
+		<!-- KEYBOARD SETTINGS -->
+		<numlock>off</numlock>
+		<layoutScope>global</layoutScope>
+		<repeatRate>25</repeatRate>
+		<repeatDelay>600</repeatDelay>
+		
+		
+		<!-- SYSTEM KEYBINDS -->
+    
+		<!-- Open the main menu -->
+		<keybind key="W-a">
+			<action name="ShowMenu">
+				<menu>root-menu</menu>
+			</action>
+		</keybind>
+
+		<!-- close the selected window -->
+		<keybind key="W-q">
+			<action name="Close" />
+		</keybind>
+
+		<!-- lock the screen -->
+		<keybind key="W-l">
+			<action name="Execute" command="swaylock -c 000000" />
+		</keybind>
+		
+		<!-- alt-tab between windows -->
+		<keybind key="A-Tab">
+			<action name="NextWindow" />
+		</keybind>
+		
+		<!-- raise / lower volume & mute -->
+		<keybind key="W-=">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 10%+" />
+		</keybind>
+		<keybind key="W--">
+			<action name="Execute" command="wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 10%-" />
+		</keybind>
+		<keybind key="W-BackSpace">
+			<action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+		</keybind>
+		
+		<!-- increase / decrease brightness -->
+		<keybind key="W-]">
+			<action name="Execute" command="brightnessctl set +10%" />
+		</keybind>
+		<keybind key="W-[">
+			<action name="Execute" command="brightnessctl set 10%-" />
+		</keybind>
+		
+		
+		<!-- WINDOW ARRANGEMENT KEYBINDS -->
+		
+		<!-- maximise / minimise -->
+		<keybind key="C-Up">
+			<action name="ToggleMaximize" />
+		</keybind>
+		<keybind key="C-Down">
+			<action name="Iconify" />
+		</keybind>
+		
+		<!-- 2 way split (x2 horizontal by x1 vertical) -->
+		<keybind key="W-Left">
+			<action name="SnapToEdge" direction="left" />
+		</keybind>
+		<keybind key="W-Right">
+			<action name="SnapToEdge" direction="right" />
+		</keybind>
+		<!-- 2 way split (x1 horizontal by x2 vertical) -->
+		<keybind key="W-Up">
+			<action name="SnapToEdge" direction="up" />
+		</keybind>
+		<keybind key="W-Down">
+			<action name="SnapToEdge" direction="down" />
+		</keybind>
+		
+		<!-- 4 way split (x2 horizontal by x2 vertical) -->
+		<keybind key="W-A-Left">
+			<action name="SnapToRegion" region="top-left" />
+		</keybind>
+		<keybind key="W-A-Up">
+			<action name="SnapToRegion" region="top-right" />
+		</keybind>
+		<keybind key="W-A-Right">
+			<action name="SnapToRegion" region="bottom-right" />
+		</keybind>
+		<keybind key="W-A-Down">
+			<action name="SnapToRegion" region="bottom-left" />
+		</keybind>
+		
+		<!-- 3 screen split (x3 horizontal by x1 vertical columns) -->
+		<keybind key="W-S-Left">
+			<action name="SnapToRegion" region="thirds-left" />
+		</keybind>
+		<keybind key="W-S-Down">
+			<action name="SnapToRegion" region="thirds-middle" />
+		</keybind>
+		<keybind key="W-S-Right">
+			<action name="SnapToRegion" region="thirds-right" />
+		</keybind>
+
+
+		<!-- APP KEYBINDS -->
+ s
+		<!-- open terminal -->
+		<keybind key="W-t">
+			<action name="Execute" command="foot" />
+		</keybind>
+		
+		<!-- open file explorer -->
+		<keybind key="W-e">
+			<action name="Execute" command="pcmanfm" />
+		</keybind>
+		
+		<!-- open browser -->
+		<keybind key="W-b">
+			<action name="Execute" command="firefox" />
+		</keybind>
+		
+		<!-- show clock -->
+		<keybind key="W-c">
+			<action name="Execute">
+				<command>foot -w 320x110 sh -c "tty-clock -s"</command>
+			</action>
+		</keybind>
+		
+		<!-- show processes -->
+		<keybind key="W-p">
+			<action name="Execute">
+				<command>foot -w 1024x960 "htop"</command>
+			</action>
+		</keybind>
+		
+		<!-- run launcher -->
+		<keybind key="W-r">
+			<action name="Execute" command="dlaunch.sh" />
+		</keybind>
+		
+		<!-- take screenshot - default output to home folder -->
+		<keybind key="Print">
+			<action name="Execute">
+				<command>grim "$HOME/$(date '+%y%m%d_%H-%M-%S').png"</command>
+			</action>
+		</keybind>
+		
+		<!-- Minimise all windows -->
+		<keybind key="W-.">
+			<action name="None" />
+		</keybind>
+		
+		
+	</keyboard>
+
+
+	<mouse>
+		<!-- 
+		SUPPORTED MOUSE OPTIONS
+			button="" Left, Right, Middle, Side, Extra, Forward, Back, Task 
+			action="" Press, Release, Click, DoubleClick, Drag (must move mouse), Scroll (in DIRECTION)
+			direction="" Up, Down, Left, Right
+		-->
+		<default />
+		
+		<!-- set core mouse buttons -->
+		<context name="Root">
+			<mousebind button="Left" action="Press">
+				<action name="None" />
+			</mousebind>
+			<mousebind button="Right" action="Press">
+				<action name="ShowMenu" menu="root-menu" />
+			</mousebind>
+			<mousebind button="Middle" action="Press">
+				<action name="None" />
+			</mousebind>
+			<mousebind button="Side" action="Press">
+				<action name="None" />
+			</mousebind>
+			<mousebind button="Extra" action="Press">
+				<action name="None" />
+			</mousebind>
+		</context>
+		
+
+		<!-- setup zoom functionality -->
+		<context name="All">
+			<mousebind direction="W-Up" action="Scroll">
+				<action name="ZoomIn"/>
+			</mousebind>
+			<mousebind direction="W-Down" action="Scroll">
+				<action name="ZoomOut"/>
+			</mousebind>
+		</context>
+
+	</mouse>
+
+
+	<!-- configure magnification settings -->
+	<magnifier>
+		<width>500</width>
+		<height>500</height>
+		<initScale>2.0</initScale>
+		<increment>0.2</increment>
+		<useFilter>yes</useFilter>
+	</magnifier>
+
+</labwc_config>
+

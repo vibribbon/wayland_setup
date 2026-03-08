@@ -1,0 +1,29 @@
+
+bar:
+  location: top
+  height: 26
+  background: 00000066
+  foreground: 00ff00ff
+
+  right:
+    # This is the clock module.
+    # More at its corresponding man page: yambar-modules-clock(5)
+    - clock:
+        # =time-format= is an attribute of =clock=
+        time-format: "%H:%M %Z"
+        # =date-format= is an attribute of =clock=
+        date-format: "%A %Y-%m-%d"
+        # The =content= key is an attribute common to all modules.
+        # It always contains a seq(uence) of particles
+        content:
+          # =string= is a particle.
+          # - string: {text: " ", }
+          # The value of =string= (a particle) is a map with two keys!
+          - string: {text: "{date}", right-margin: 10}
+          # *awesome is an alias to the value of =awesome_font,
+          # and will get substituted by its value
+          - string: {text: "> "}
+          # {date} and {time} are tags accessible inside of =clock=
+          - string: {text: "{time}", right-margin: 10}
+    # =label= is a module too!
+
