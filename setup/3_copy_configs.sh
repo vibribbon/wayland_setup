@@ -1,7 +1,8 @@
+#!/bin/bash
 
 # copy config files
 
 # run as user not root / su
-
-cp -a /mnt/m_500gb_extra/os/config_files/home/ /home/vibri/
-sudo cp /mnt/m_500gb_extra/os/config_files/etc/sudoers.d/shutdown.txt /etc/sudoers.d/
+cp -a ~/git/wayland_setup/config_files/home/ ~/
+sudo cp ~/git/wayland_setup/config_files/etc/sudoers.d/shutdown.txt /etc/sudoers.d/
+sudo cp ~/git/wayland_setup/config_files/etc/default/grub /etc/default/

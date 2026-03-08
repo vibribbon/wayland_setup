@@ -60,7 +60,7 @@ apt-get install -y wob				# slider bars
 apt-get install -y yambar			# minimal taskbar
 # apt-get install -y lemonbar		# minimal taskbar
 # apt-get install -y xfce4-panel	# taskbar
-apt-get install -y gammastep		# wayland gamma / nightmode
+# apt-get install -y gammastep		# wayland gamma / nightmode
 # apt-get install -y fuzzel			# launcher
 # apt-get install -y tofi				# launcher
 apt-get install -y dmenu			# custom menu
@@ -137,7 +137,7 @@ apt-get install -y nethogs		# bandwith usage (cli)
 # apt-get install -y traceroute	# internet traceroute (cli)
 # apt-get install -y whois		# whois identification (cli)
 # apt-get install -y finger		# network machine details (cli)
-apt-get install -y conky		# system monitor [MB]
+# apt-get install -y conky		# system monitor [MB]
 # apt-get install -y cpu-x 		# CPU informaiton like cpu-z
 
 ## ACCESSORIES
@@ -162,7 +162,7 @@ apt-get install -y moc			# music player (cli) [5MB]
 # apt-get install -y clementine	# music player [90MB]
 # apt-get install -y ffmpeg		# audo & video converter (cli) [125MB]
 apt-get install -y audacity		# non-linear audio editor [140MB]
-apt-get install -y lmms			# full audio recording station daw [50MB]
+# apt-get install -y lmms		# full audio recording station daw [50MB]
 
 ## GRAPHICS & IMAGES
 # apt-get install -y feh		# frameless image viewer [80MB]
@@ -175,7 +175,7 @@ apt-get install -y swayimg	# image viewer [10MB]
 # apt-get install -y nomacs 	# image viewer and organiser [130MB]
 # apt-get install -y darktable	# image / raw viewer & organiser [180MB]
 apt-get install -y gimp			# photo editor [310MB]
-# apt-get install -y inkscape	# drawing package [300MB]
+apt-get install -y inkscape		# drawing package [300MB]
 # apt-get install -y krita		# painting package [710MB]
 # apt-get install -y mupdf		# pdf viewer [80MB]
 apt-get install -y zathura		# pdf viewer [80MB]
@@ -220,8 +220,8 @@ apt-get install -y cups 	# printer server
 ## DRIVERS
 # install pipewire audio [20MB]
 apt-get install -y pipewire pipewire-pulse pipewire-audio-client-libraries libspa-0.2-bluetooth libspa-0.2-jack gstreamer1.0-pipewire
+# apt-get install mesa-utils mesa-vulkan-drivers libvulkan1 libvulkan-dev firmware-amd-graphics
 # apt-get install -y firmware-linux firmware-linux-nonfree	# optional non-free firmware
-# apt-get install -y firmware-amd-graphics linux-image-amd	# graphics card firmware
 # dpkg --add-architecture i386	# install i386 architecture
 # ----------------------------------------------------------------------
 
