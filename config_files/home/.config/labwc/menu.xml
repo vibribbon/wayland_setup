@@ -420,12 +420,12 @@
 		
 		<item label="Show installed apps">
 			<action name="Execute">
-				<command>foot -w 1024x960 -H sh -c "list_manual_apps"</command>
+				<command>foot -w 1024x960 -H sh -c "sudo list_manual_apps"</command>
 			</action>
 		</item>
 		<item label="Show installed flatpaks">
 			<action name="Execute">
-				<command>foot -w 1024x960 -H sh -c "flatpak list"</command>
+				<command>foot -w 1024x960 -H sh -c "sudo flatpak list"</command>
 			</action>
 		</item>
 		
@@ -548,6 +548,11 @@
 		<separator />
 		
 		<menu id="m_logs" label="System Logs">
+			<item label="Log - High priority errors">
+				<action name="Execute">
+					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -p 3 -xb"</command>
+				</action>
+			</item>
 			<item label="Log - All last 24hrs">
 				<action name="Execute">
 					<command>foot -w 1920x1080 -H sh -c "sudo journalctl -o short-full --since '1 days ago'"</command>

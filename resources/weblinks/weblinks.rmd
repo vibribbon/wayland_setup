@@ -1,0 +1,407 @@
+
+---
+title: "Weblinks"
+author: "Vibri"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    --- css: styles.css
+    theme: darkly
+    highlight: zenburn
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    toc_depth: 2
+  
+---
+
+# An Index Of Useful Links On Various Topics
+
+
+## Search
+
+- [Duckduckgo](https://duckduckgo.com/?kz=-1&kbj=1&kc=-1&kac=-1&kae=d&k1=-1&kat=-1&kaj=m&kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1&kau=-1&kbe=1)
+- [Startpage](https://www.startpage.com/do/mypage.pl?prfe=1d0c6bd6a892ed3b2f46251b2f7507ebf91eb5c1a6ab19eb3e9ce203cd033b298da85cd0606cd01152a7f62ac4b1a2b11d540a4f36f87fe3bcb5d5598596f15f2c180642a226ae7bc22ecd3fb4ddcf18e1)
+- [Gibiru](https://gibiru.com/)
+- [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+- [Wiktionary (dictionary)](https://en.wiktionary.org/wiki/Wiktionary:Main_Page)
+- [Here We Go (maps)](https://wego.here.com)
+- [Duck AI](https://duck.ai/)
+
+
+## Shopping {.tabset}
+
+### VG Virtual
+- [GOG ](https://www.gog.com/en/)
+- [Humble Bundle](https://www.humblebundle.com/games)
+- [Itch.io](https://itch.io/)
+- [Fanatical](https://www.fanatical.com/en/bundle/games)
+- [Eneba](https://www.eneba.com/gb/store/steam-games)
+- [Is There Any Deal](https://isthereanydeal.com/giveaways/)
+- [Pledge Manager](https://www.pledgemanager.com/)
+
+### VG Physical
+- [Game Collection](https://www.thegamecollection.net/collections/ps5-games?sort_by=price-ascending&filter.v.availability=1)
+- [Hit](https://hit.co.uk/collections/playstation?filter.v.price.gte=&filter.v.price.lte=&filter.p.m.custom.format=PS5&sort_by=price-ascending)
+- [Simply Games](https://www.simplygames.com/ps5/games?filter=price-low-high)
+- [Gamery](https://www.thegamery.co.uk/)
+- [Play Asia](https://www.play-asia.com/)
+- [Limited Run Games](https://limitedrungames.com/)
+- [PriceRunner](https://www.pricerunner.com/)
+- [Play Date](https://play.date/)
+
+### VG Retro
+- [Ebay](https://www.ebay.co.uk/)
+
+### Boardgames
+- [Board Game Prices](https://boardgameprices.co.uk/)
+- [Zatu](https://zatu.com/)
+- [Games Lore](https://www.gameslore.com/)
+- [Chaos Cards](https://www.chaoscards.co.uk/)
+- [Firestorm Cards](https://www.firestormcards.co.uk/)
+- [Travel Games](https://travel-games.co.uk/)
+- [Ali Express](https://www.aliexpress.com/)
+- [Drive Thru Rpg](https://www.drivethrurpg.com/index.php)
+- [Kickstarter](https://www.kickstarter.com/discover/categories/games/tabletop%20games?ref=discovery_overlay)
+- [Pnp Arcade](https://www.pnparcade.com/)
+- [Paizo Rpgs](https://paizo.com/cgi-bin/WebObjects/Store.woa/wa/DirectAction/signIn?path=paizo/account/assets)
+- [Gmt Games P500](https://www.gmtgames.com/s-2-p500.aspx)
+- [Pevans Games](https://pevans.co.uk/Games/SierraMadre.html)
+- [Bully Pulpit Games](https://bullypulpitgames.com/collections/all)
+- [Cheap Ass Games](https://crabfragmentlabs.com/games)
+
+### Computing
+- [PC Part Picker](https://uk.pcpartpicker.com/)
+
+### Tech
+
+- [Hifi Guides](https://hifiguides.com/)
+
+### Apparal
+
+- [Asos](https://www.asos.com/)
+- [Zara](https://www.zara.com/uk/)
+- [Muji](https://uk.muji.eu/)
+- [Uniqlo](https://www.uniqlo.com/uk/en/)
+
+### Other
+
+- [Pocketmags (magazines)](https://pocketmags.com/)
+- [Bitmap books](https://www.bitmapbooks.com/)
+- [Dox Direct (printing)](https://www.doxdirect.com/)
+- [Etsy](https://www.etsy.com/)
+
+
+## Entertainment {.tabset}
+
+### TV
+- [Invidious (youtube player)](https://redirect.invidious.io/)
+- [Poketube (youtube player)](https://poketube.fun/search)
+- [Cobolt Tools (media downloader)](https://cobalt.tools/)
+- [Netflix](https://www.netflix.com/gb/login?serverState=%7B%22realm%22%3A%22growth%22%2C%22name%22%3A%22IDENTIFICATION%22%2C%22clcsSessionId%22%3A%2218b412bc-8577-402e-b5ed-0269adc00403%22%2C%22sessionContext%22%3A%7B%22session-breadcrumbs%22%3A%7B%22funnel_name%22%3A%22loginWeb%22%7D%7D%7D)
+- [Crunchy Roll](https://www.crunchyroll.com/videos/anime)
+- [Curiosity Stream](https://curiositystream.com/)
+- [Kiss Cartoon](https://kisscartoon.nz/kisscartoon.html)
+- [HiDive](https://www.hidive.com/)
+- [Just Watch](https://www.justwatch.com/uk)
+
+### Music
+- [Spotify](https://open.spotify.com/search)
+- [Jet Set Radio Live](https://jetsetradio.live/)
+- [Radio Garden](https://radio.garden/)
+
+### Comics
+- [Penny Arcade](https://www.penny-arcade.com/comic/)
+- [XKCD](https://xkcd.com/)
+- [Get Comics](https://getcomics.org/)
+
+### Other
+- [Open Subtitles](https://www.opensubtitles.com/@)
+- [Youtube Transcript](https://youtubetranscript.com/)
+
+### Out
+- [Atlas Obscura](https://www.atlasobscura.com/)
+- [Arcade Club](https://www.arcadeclub.co.uk/)
+- [NEC Whats On](https://www.thenec.co.uk/events/)
+- [Birmingham Conservertoire](https://www.bcu.ac.uk/conservatoire/events-calendar)
+- [JET Rector Tours](https://www.eventbrite.co.uk/o/uk-atomic-energy-authority-30635372912)
+- [Banksy Graffiti Map](https://banksymap.com/map/)  
+
+
+## Software {.tabset}
+
+### SAAS
+- [Google Drive](https://accounts.google.com/v3/signin/identifier?continue=http%3A%2F%2Fdrive.google.com%2F%3Futm_source%3Den&dsh=S-2111789809%3A1773574816325157&flowEntry=ServiceLogin&flowName=GlifWebSignIn&ifkv=ASfE1-qdM_r7kL63_PbVnwEhZWan2FmG650lNyf1KXi4ddHvjeJXFFxQSoSlTmgiuVSeGvcC93B5nQ&ltmpl=drive&passive=true&service=wise&usp=gtd&utm_campaign=web&utm_content=gotodrive&utm_medium=button)
+- [Github (source code sharing)](https://github.com/login)
+- [Dillinger (markdown editor)](https://dillinger.io/)
+- [Fastpen (html editor)](https://fastpen.lecaro.me/)
+- [Photopea (photo editor)](https://www.photopea.com/)
+- [Graphite (svg drawing)](https://editor.graphite.art/)
+- [Sketchup (3d modlling)](https://id.trimble.com/ui/sign_in.html)
+- [diagrams.net (flowcharts / diagrams)](https://app.diagrams.net/)
+- [Witeboard.com (shared whireboard)](https://witeboard.com/)
+- [Colorkit (colour pallete generator)](https://colorkit.co/color-palette-generator/)
+- [Slides.com (slideshow)](https://slides.com)
+- [Canva (dtp)](https://www.canva.com/)
+- [Open Publisher (dtp)](https://openpublisher.app/)
+- [Typst (document writing)](https://typst.app/#start)
+- [Overleaf (latex editor)](https://www.overleaf.com/)
+- [Standard Notes (note taking)](https://app.standardnotes.com/)
+- [Chart Create (infrographics)](https://chartcreate.com/)
+- [Graph Online (graphing nodes)](https://graphonline.top/)
+- [Ethercalc (online spreadsheet)](https://ethercalc.net/)
+- [Mentimeter (surveys)](https://www.mentimeter.com/)
+- [Kan.bn (kanban boards)](https://kan.bn/)  
+
+### Online
+- [Local Send (file sharing - same network)](https://web.localsend.org/)
+- [Mathway (maths solver)](https://www.mathway.com/Algebra)
+- [Qhanzi (handwritten chinese characters)](https://www.qhanzi.com/)
+- [Kanji (handwritten kanji)](https://kanji.sljfaq.org/)
+- [PrintFriendly (pdf creator)](https://www.printfriendly.com/)
+- [10 Minute Mail (temporary email)](https://10minutemail.com/)
+- [DiffGuru (trext / image diff)](https://diffguru.com/)
+- [Frameit (THumbnail creator)](https://frameit.dev/)
+- [PaperKnife (un-pdf tool)](https://potatameister.github.io/PaperKnife/)
+
+### Install
+
+
+## Learning {.tabset}
+
+### Classes / Courses
+- [Class Cenreal (courses)](https://www.classcentral.com/)
+- [Udemy Courses (courses)](https://www.udemy.com/)
+- [W3 Schools Courses (courses)](https://www.w3schools.com/)
+- [MIT Open Courses (courses)](https://ocw.mit.edu/)
+
+### Articles
+- [Tidy Text Mining (r)](https://www.tidytextmining.com/preface.html)
+- [Beej's C Coding (c)](https://beej.us/guide/bgc/html/split/foreword.html#foreword)
+- [Real Python (python)](https://realpython.com/)
+
+### Repositories
+- [Europeana (art history)](https://www.europeana.eu/en)
+- [Major Periods In World History (history)](https://biographyonline.net/different-periods-in-history/)
+- [Open CUlture (history)](https://www.openculture.com/freeonlinecourses)
+- [Arch Linux Documentation (documentation)](https://wiki.archlinux.org/title/Main_page)
+- [Explain Shell (del)](https://explainshell.com/)
+- [SS64 (bash)](https://ss64.com/bash/)
+- [Pep8 Standardisation (python)](https://peps.python.org/pep-0008/)
+- [Untools (thinking tools)](https://untools.co/)
+- [Pandas In Python (python)](https://pandas.pydata.org/pandas-docs/stable/index.html)
+
+
+## Reference {.tabset}
+
+### Gaming
+- [Cloud Base GG (game availability)](https://cloudbase.gg/)
+- [ProtonDB (linux compatability)](https://www.protondb.com/)
+- [Co-Optimus (coop play)](https://www.co-optimus.com/games.php)
+- [Fighters Generation (fighting games)](https://www.fightersgeneration.com/fightersgen.htm)
+- [Shmups Forum (shoot-em-ups)](https://shmups.system11.org/viewtopic.php?f=1&t=69744)
+- [WHat To Play (game discovery)](https://whatoplay.com/discover/)
+- [Retronauts (ppodcast)](https://retronauts.com/)
+- [How Long To Beat (game length)](https://howlongtobeat.com/)
+- [Steam 250 (game populatity)](https://steam250.com/)
+- [Steam Charts (game populatity)](https://steamcharts.com/)
+- [Backwards Compatible (playstation compatability)](https://www.backwards-compatible.com/)
+- [Wiki List Of Video Games (wiki)](https://en.wikipedia.org/wiki/Lists_of_video_games)
+- [Linux GSM (linux servers)](https://linuxgsm.com/)
+- [Xbox 360 International Compatability (importing)](https://www.play-asia.com/info/xbox360_compatibility_guide#list)
+- [Ps2 Pal 60hz Games (60hz support)](https://www.benoitren.be/60hz-palps2.html)
+
+### Boardgames
+- [Board Game Geek](https://boardgamegeek.com/)
+- [American Tabletop Awards](https://americantabletopawards.com/)
+- [Doomtown DB (doomtown)](https://dtdb.co/)
+- [Senet Magazine (magazine)](https://senetmagazine.com/)
+- [Pagat Card Games (card games)](https://www.pagat.com/)
+- [Magic THe Gathering Peasant (mtg)](https://mtg-peasant.com/home/)
+- [200 Word Rpg Challenge (rpg)](https://200wordrpg.github.io/winners)
+- [BGG Collection Stats (game stats)](https://www.boardgamehelpers.com/BGGCollectionStats.aspx)
+- [Experimental Playground P&P (print and play)](https://experimentalplayground.blogspot.com/)
+
+### Software
+- [NikApps (android gapps)](https://nikgapps.com/)
+- [Lineage OS (android)](https://www.lineageos.org/)
+- [Linux Journal - Networking (networking)](https://www.linuxjournal.com/content/linux-networking-simplified-guide-ip-addresses-and-routing)
+- [Linux Hardening (security)](https://vez.mrsk.me/linux-hardening)
+- [Distrowatch (distros)](https://distrowatch.com/)
+- [Netgate PF-Sense (router)](https://docs.netgate.com/)
+- [Cheatography Cheat Sheets (del)](https://cheatography.com/)
+- [Bullet Journal Planner (planning)](https://lifehacker.com/the-bullet-journal-minus-the-hype-is-actually-a-reall-1786382012)
+- [Expert Photography - For Beginners (photography)](https://expertphotography.com/a-beginners-guide-to-photography)
+- [AlternativeTo Software (software)](https://alternativeto.net/)
+- [Mame Emulation (emulation)](https://www.mamedev.org/)
+
+### Hardware
+- [Can You Run It (system)](https://pc-builds.com/cyri/)
+- [Toms Hardware Gpu Hierarchy (benchmark)](https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html)
+- [Cpu Benchmark (benchmark)](https://www.cpubenchmark.net/)
+- [Retina Calculator (monitor)](https://www.tools.rodrigopolo.com/display_calc/)
+
+### Films
+- [Empire Online (film review)](https://www.empireonline.com/movies/reviews/)
+- [Timeout Top 100 Hong Kong Films (recommendations)](https://www.timeout.com/hong-kong/film/best-hong-kong-movies)
+- [Uk China Film Colab (releases)](https://www.ukchinafilm.com/)
+
+### Travel
+- [UK Foreign Travel (travel)](https://www.gov.uk/foreign-travel-advice)
+- [National Rail (travel)](https://www.nationalrail.co.uk/)
+- [Food Hygene Ratings (food)](https://ratings.food.gov.uk/)
+
+### Other
+- [NPR Audio Quality Test (audio)](https://www.npr.org/sections/therecord/2015/06/02/411473508/how-well-can-you-hear-audio-quality?t=1578904668212)
+- [THe Verge - Installer (recommendations)](https://www.theverge.com/installer-newsletter)
+- [Myers Briggs (sociology)](https://www.psychologyjunkie.com/how-to-connect-with-every-myers-briggs-personality-type/#h-things-that-discourage-connection-1)
+
+
+## Resources
+- [Giphy (gifs)](https://giphy.com/)
+- [Unsplash (images)](https://unsplash.com/)
+- [Pixabay (images)](https://pixabay.com/)
+- [Noun Project (icons)](https://thenounproject.com/)
+- [CopyChar (del)](https://copychar.cc/popular/)
+- [Google Fonts (del)](https://fonts.google.com/)
+- [AppImage Hub (del)](https://www.appimagehub.com/)
+- [Portable Apps (del)](https://portableapps.com/)
+- [Apk Mirror (del)](https://www.apkmirror.com/)
+- [Manuals Library (manuals)](https://www.manualslib.com/)
+- [Project Gutenberg (books)](https://www.gutenberg.org/)
+- [Open Library (library)](https://openlibrary.org/)
+
+
+## Social
+- [Whatsapp Web (whatsapp reader)](https://web.whatsapp.com/)
+- [Flufi (instagram viewer)](https://flufi.me/)
+- [Nitter (twitter viewer)](https://nitter.poast.org/)
+- [Urlebird (tiktok viewer)](https://urlebird.com/)
+- [Gnod (related media)](https://www.gnod.com/)
+- [Google Trends (trends)](https://trends.google.co.in/trends/?geo=GB)
+- [Urban Dictionary (slang)](https://www.urbandictionary.com/)
+- [Know Your Meme (memes)](https://knowyourmeme.com/)
+
+
+## Food & cooking
+- [Spices Pairing](https://i.pinimg.com/originals/c5/b7/6a/c5b76aeb0daf79c64364026b30df4efc.jpg)
+- [NHS Recipies](https://www.nhs.uk/healthier-families/recipes/)
+- [Seasonal Calendar](https://www.bbcgoodfood.com/howto/guide/seasonal-calendar)
+- [Recipe Spinich Side](https://christieathome.com/blog/korean-spinach-side-dish/#recipe)
+
+
+## Health & fitness {.tabset}
+
+### Fitness
+- [Darebee (exercises)](https://darebee.com/#)
+- [Buzfeed Bodyweight Exercises (exercises)](https://www.buzzfeed.com/sallytamarkin/get-fit-bodyweight-exercises)
+- [Self Essential Stretches (stretches)](https://www.self.com/gallery/essential-stretches-slideshow)
+- [Nighttime Meditation (meditaion)](https://www.nhs.uk/live-well/sleep-and-tiredness/bedtime-meditation/)
+
+### Health
+- [Eat This Much (healthy eating)](https://www.eatthismuch.com/)
+- [Who Eating Advice (Healthy Eating)](https://www.who.int/news-room/fact-sheets/detail/healthy-diet)
+- [NHS Better Health (lose weight)](https://www.nhs.uk/better-health/)
+- [BHF 100 Calories (lose weight)](https://www.bhf.org.uk/informationsupport/heart-matters-magazine/nutrition/weight/what-does-100-calories-look-like)
+
+
+## Gaming {.tabset}
+
+### Online
+- [Itch.io Web Games (html5)](https://itch.io/games/platform-web)
+- [Retro Games Online](https://www.playretrogames.com/)
+- [Torinak Spectrum (online emulator)](https://torinak.com/qaop/games)
+- [TG16.com (pc-engine / tg16 Emulator)](https://www.tgx16.com/)
+- [Classic Reload - Colecovision (emulator)](https://classicreload.com/colecovision-collection.html)
+- [Epic Port (dos emulator)](https://epicport.com/en/)
+- [WebRcade (various consoles)](https://play.webrcade.com/)
+
+### Online Individual
+- [City Guesser](https://virtualvacation.us/guess)
+- [Hole.io](https://playhole.io/)
+- [Duelyst](https://duelyst.gg/)
+- [Catan Online](https://catanuniverse.de/en/game/)
+- [Chess.com](https://www.chess.com/)
+- [Dominion Online](https://www.dominion.games/)
+- [Wiki Trivia](https://wikitrivia.tomjwatson.com/)
+- [Free Civ](https://www.freecivweb.org/)
+- [Web Sudoku](https://www.websudoku.com/)
+- [Picowars](https://lambdanaut.itch.io/picowars)
+- [Taisei](https://taisei-project.github.io/taisei-web-test/)
+- [Dead Estate](https://milkbar-lads.itch.io/dead-estate-classic)
+- [Paper Soldiers](https://andriy-bychkovskyi.itch.io/paper-soldiers)
+- [Spelunky](https://tinysubversions.com/game/spelunky/)
+- [Geopolitics](https://beardybard.itch.io/geopolitics)
+- [picodriller](https://canarigames.itch.io/picodriller)
+- [Toe2Toe](https://plazatin.itch.io/toe-20-toe)
+- [Bronzette](https://tweedledim.itch.io/bronzette)
+- [Click Of Cthulhu](https://studio-black-flag.itch.io/click-of-cthulhu)
+- [Celeste Classic](https://maddymakesgamesinc.itch.io/celesteclassic)
+- [Happy Cat Tavern](https://couriercatstudio.itch.io/happy-cat-tavern)
+- [Super Auto Pets](https://teamwood.itch.io/super-auto-pets)
+- [Mingle](https://cookiecrayon.itch.io/mingle)
+- [Plant Daddy](https://overfull.itch.io/plantdaddy)
+- [Mai's Sweet Buns](https://krystman.itch.io/sweet-buns)
+- [Boba Simulator](https://jetamp.itch.io/boba-simulator)
+- [Shogun Showdown](https://roboatino.itch.io/shogunshowdown)
+- [It Was All For The Tuna](https://cosmicadventuresquad.itch.io/it-was-all-for-the-tuna)
+- [Paku Paku](https://abagames.github.io/crisp-game-lib-11-games/?pakupaku)
+- [Kaiju](https://skeletom-ch.itch.io/kaiju)
+- [Cardboard](https://kirklindsay.itch.io/cardhoard)
+- [Konkr](https://www.konkr.io/)
+- [Mis Trick](https://hatoge.itch.io/mistrick)
+- [Unsolicited (lucas pope)](https://dukope.com/uns/play.html)
+- [Gridland](https://gridland.doublespeakgames.com/)
+- [Townscaper](https://oskarstalberg.com/Townscaper/#GSB0RARueC6Snc9E0lO5B)
+- [Password Game](https://neal.fun/password-game/)
+- [Republica Times (lucas pope)](https://dukope.com/trt/play.html)
+- [Sea Has No Claim (lucas pope)](https://dukope.com/sea/play.html)
+- [Suika Game](https://suikagame.com/)
+- [Dungeon Crawl Stone Souo](https://crawl.develz.org/play.htm)
+
+### Download
+- [Icculus.org](https://icculus.org/)
+- [OpenRA (Red Alert)](https://www.openra.net/)
+- [Free Civ](https://www.freeciv.org/)
+- [The Dark Mod](https://www.thedarkmod.com/main/)
+- [Xonotic](https://xonotic.org/)
+- [Luanti (open minecraft)](https://www.luanti.org/en/)
+- [Open Transport Tycoon](https://www.openttd.org/)
+- [0ad](https://play0ad.com/)
+- [Dwarf Fortress](https://www.bay12games.com/dwarves/)
+- [Free COl](https://www.freecol.org/)
+- [Chocolate Doom](https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom)
+- [Nethack](https://www.nethack.org/)
+
+### Mods
+- [Open Morrowind (OpenMW)](https://openmw.org/)
+
+### Other
+- [BoardGame Arena](https://en.boardgamearena.com/)
+- [Roll 20](https://roll20.net/)
+
+
+## Security / Diagnostic
+- [What's My IP](https://www.whatsmyip.org/)
+- [Cloudflare Radar](https://radar.cloudflare.com/)
+- [Bufferbloat Wifi Test](https://www.waveform.com/tools/bufferbloat)
+- [Fast.com Speed Test](https://fast.com/en/gb/#)
+- [Virus Total](https://www.virustotal.com/gui/)
+- [Have I Been Pwned](https://haveibeenpwned.com/)
+
+
+## AI
+- [Red Panda Image Generator](https://redpandaai.com/image/generator)
+- [Raphael Image Generator](https://raphael.app/)
+- [Perchance Image Generator](https://perchance.org/ai-text-to-image-generator)
+- [Llama Image Generator](https://aiimagegenerator.is/tag/llama)
+- [Ai Text To Speech](https://www.text-to-speech.online/)
+- [Giz Video Generator](https://www.giz.ai/ai-video-generator/)
+
+
+## Watchlist
+
+
+## Personal
+- [Personal Bookmarks](bookmarks.html)

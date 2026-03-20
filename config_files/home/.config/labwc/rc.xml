@@ -33,14 +33,15 @@
 	
 	<!-- windows placement -->
 	<placement>
+		<!-- WIndown placment policy can be automatic; cascade; center; cursor-->
 		<policy>automatic</policy>
 		<!--
 			When <placement><policy> is "cascade", the offset for cascading new
 			windows can be overwritten like this:
 			<cascadeOffset x="40" y="30" />
-		-->
+		-->		
 	</placement>
-	
+		
 	
 	<!-- settings for the alt-tab menu -->
 	<windowSwitcher preview="yes" outlines="yes" unshade="yes">
@@ -58,7 +59,7 @@
 		<region name="top"          x="0%"  y="0%"  height="50%"  width="100%" />
 		<region name="top-right"    x="50%" y="0%"  height="50%"  width="50%"  />
 		<region name="left"         x="0%"  y="0%"  height="100%" width="50%"  />
-		<region name="center"       x="10%" y="10%" height="80%"  width="80%"  />
+		<region name="center"       x="45%" y="44%" height="6%"  width="10%"  />
 		<region name="right"        x="50%" y="0%"  height="100%" width="50%"  />
 		<region name="bottom-left"  x="0%"  y="50%" height="50%"  width="50%"  />
 		<region name="bottom"       x="0%"  y="50%" height="50%"  width="100%" />
@@ -68,6 +69,15 @@
 		<region name="thirds-right" x="66%" y="0%" height="100%"  width="33%"  />
 		<region name="middle" x="33%" y="45%" height="25%"  width="25%"  />
 	</regions>
+	
+	
+	<!-- Override the windown placement policy for specific windows -->
+	<windowRules>
+		<!-- match windows called 'Confirm'-->
+		<windowRule title="Confirm" matchOnce="true">
+			<action name="SnapToRegion" region="center" />
+		</windowRule>
+	</windowRules>
 	
 	
 	<keyboard>
@@ -118,14 +128,11 @@
 		
 		<!-- increase / decrease brightness -->
 		<keybind key="W-]">
-			<action name="Execute" command="brightnessctl set +10%" />
+			<action name="Execute" command="gammastep -c ~/.config/gammastep/config.ini" />
 		</keybind>
 		<keybind key="W-[">
-			<action name="Execute" command="brightnessctl set 10%-" />
+			<action name="Execute" command="killall gammastep" />
 		</keybind>
-		
-		
-		<!-- WINDOW ARRANGEMENT KEYBINDS -->
 		
 		<!-- maximise / minimise -->
 		<keybind key="C-Up">
@@ -135,6 +142,14 @@
 			<action name="Iconify" />
 		</keybind>
 		
+		<!-- Minimise all windows -->
+		<keybind key="C-A-Down">
+			<action name="Execute" command="wlrctl window minimize" />
+		</keybind>
+		
+		
+		<!-- WINDOW ARRANGEMENT KEYBINDS -->
+
 		<!-- 2 way split (x2 horizontal by x1 vertical) -->
 		<keybind key="W-Left">
 			<action name="SnapToEdge" direction="left" />
@@ -218,13 +233,7 @@
 				<command>grim "$HOME/$(date '+%y%m%d_%H-%M-%S').png"</command>
 			</action>
 		</keybind>
-		
-		<!-- Minimise all windows -->
-		<keybind key="W-.">
-			<action name="None" />
-		</keybind>
-		
-		
+
 	</keyboard>
 
 

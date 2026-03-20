@@ -48,37 +48,42 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 ## OS COMPONENTS
 # these are neede for a GUI!
-apt-get install -y labwc			# window manager
+apt-get install -y labwc			# window manager ('windows')
 
 apt-get install -y swayidle			# screen timeout
 apt-get install -y swaylock			# screen locker
 apt-get install -y wlopm			# power controller
-apt-get install -y wlr-randr		# monitor confic
+apt-get install -y wlr-randr		# monitor config
 apt-get install -y wdisplays		# display manager
 apt-get install -y swaybg			# wayland backgrounds
 apt-get install -y wob				# slider bars
 apt-get install -y yambar			# minimal taskbar
 # apt-get install -y lemonbar		# minimal taskbar
 # apt-get install -y xfce4-panel	# taskbar
-# apt-get install -y gammastep		# wayland gamma / nightmode
+apt-get install -y gammastep		# wayland gamma / nightmode
 # apt-get install -y fuzzel			# launcher
-# apt-get install -y tofi				# launcher
+# apt-get install -y tofi			# launcher
+# apt-get install -y nwg-bar		# launcher (default power)
 apt-get install -y dmenu			# custom menu
 apt-get install -y yad				# popup dialog box creator
 apt-get install -y nwg-look			# theme chooser
 apt-get install -y grim				# screenshot
-# apt-get install -y wmcalclock		# mini clock and calendar
 apt-get install -y mako				# wayland notifications
-
-apt-get install -y sudo				# admin permissions
+apt-get install -y wlrctl			# wayland virtual window controls
+# apt-get install -y nwg-hello		# simple wayland login greeter
+# apt-get install -y network-manager		# graphical network manager
 
 # apt-get install -y libgtk-3-dev	# gtk3 framework
 
 # ----------------------------------------------------------------------
 ## INSTALL CORE APPS
 
+## ADMIN
+apt-get install -y sudo				# admin permissions
+
 ## TERMINALS
 apt-get install -y foot				# simple terminal (cli)
+# apt-get install -y tmux			# terminal multiplexor (cli) [MB]
 # apt-get install -y alacritty		# terminal (cli) [10MB]
 # apt-get install -y xfce4-terminal	# terminal (cli) [10MB]
 
