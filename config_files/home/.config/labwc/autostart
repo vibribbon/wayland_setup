@@ -41,8 +41,9 @@ swaybg -c '#000000' >/dev/null 2>&1 &
 # (since a837fef). Instead use a wlr-output-power-management client such as
 # https://git.sr.ht/~leon_plickat/wlopm
 swayidle -w \
-	timeout 600 'swaylock -f -c 000000' \
-	timeout 300 'wlopm --off \*' \
-	resume 'wlopm --on \*' \
-	before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
-
+	timeout 300 'swaylock -f -l -c 000000' \
+	timeout 900 'wlopm --off \*' \
+		resume 'wlopm --on \*; sleep 3; wlr-randr --output HDMI-A-1 --mode 2560x1440' \
+	timeout 3600 'systemctl suspend' \
+	before-sleep 'swaylock -f -l -c 000000' \
+	after-resume 'sleep 3; wlr-randr --output HDMI-A-1 --mode 2560x1440' >/dev/null 2>&1 &

@@ -99,6 +99,12 @@
 				<menu>root-menu</menu>
 			</action>
 		</keybind>
+		
+		<keybind key="W-Space">
+			<action name="ShowMenu">
+				<menu>root-menu</menu>
+			</action>
+		</keybind>
 
 		<!-- close the selected window -->
 		<keybind key="W-q">
@@ -134,12 +140,18 @@
 			<action name="Execute" command="killall gammastep" />
 		</keybind>
 		
-		<!-- maximise / minimise -->
-		<keybind key="C-Up">
+		<!-- maximise / minimise / rotate -->
+		<keybind key="W-C-Up">
 			<action name="ToggleMaximize" />
 		</keybind>
-		<keybind key="C-Down">
+		<keybind key="W-C-Down">
 			<action name="Iconify" />
+		</keybind>
+		<keybind key="W-C-Right">
+			<action name="Execute" command="wlr-randr --output HDMI-A-1 --transform 90" />
+		</keybind>
+		<keybind key="W-C-Left">
+			<action name="Execute" command="wlr-randr --output HDMI-A-1 --transform normal" />
 		</keybind>
 		
 		<!-- Minimise all windows -->
@@ -211,7 +223,7 @@
 		<!-- show clock -->
 		<keybind key="W-c">
 			<action name="Execute">
-				<command>foot -w 320x110 sh -c "tty-clock -s"</command>
+				<command>foot -w 530x170 sh -c "tty-clock -s"</command>
 			</action>
 		</keybind>
 		

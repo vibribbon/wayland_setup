@@ -116,6 +116,7 @@ apt-get install -y rsync			# backup and sync (cli)
 apt-get install -y clamav clamtk	# virus scanner & interface [100MB]
 # apt-get install -y extundelete	# undelete tool for ext (cli) [<1MB]
 # apt-get install -y nwipe			# file wiper for flash drives / magnetic media (cli) {<1MB]
+apt-get install -y fdupes			# find and remove duplicate files (cli)
 
 ## NETWORK
 apt-get install -y ufw				# firewall (cli) [5MB]
@@ -130,6 +131,7 @@ apt-get install -y firefox-esr		# web browser
 # apt-get install -y newsboat		# rss tool (cli)
 # apt-get install -y mutt			# email client (cli)
 # apt-get install -y filezilla		# ftp client
+apt-get install -y cifs-utils		# accessing windows network shares (cli)
 
 ## MONITORING & DIAGNOSTIC
 apt-get install -y htop			# task manager (cli) [<1MB]
@@ -185,6 +187,7 @@ apt-get install -y inkscape		# drawing package [300MB]
 # apt-get install -y mupdf		# pdf viewer [80MB]
 apt-get install -y zathura		# pdf viewer [80MB]
 # apt-get install -y sioyek		# pdf viewer [160MB]
+# apt-get install -y exiftool	# exif editor / file renamer (cli) [20MB]
 
 ## VIDEO & ANIMATION
 apt-get install -y shotcut	# non-linear video editor [550MB]
@@ -194,12 +197,14 @@ apt-get install -y mpv		# minimalist media player [10MB}
 # apt-get install -y blender	# rendering and 3d printing [680MB]
 apt-get install -y yt-dlp		# youtube downloader
 # apt-get install -y obs-studio	# Screen recording studio
+# apt-get install -y wf-recorder	# tiny screen recorder (inc audio)
 
 ## OFFICE
 apt-get install -y libreoffice-writer	# document writing
 # apt-get install -y abiword			# document writing alternative to libreoffice writer [50MB]
 apt-get install -y libreoffice-impress	# slideshow design
 apt-get install -y libreoffice-calc		# spreadsheet creation
+apt-get install -y libreoffice-gnome	# dark mode for libreoffice [10MB]
 # apt-get install -y r-base				# r development
 # sudo flatpak install rstudio			# r frontend ide (flatpak)
 apt-get install -y scribus				# desktop publishing creator

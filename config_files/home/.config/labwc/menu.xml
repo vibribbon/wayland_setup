@@ -397,6 +397,16 @@
 				<command>foot -w 800x600 sh -c "sudo mount -t ext4 /dev/sdb1 /mnt/m_shared_500gb/"</command>
 			</action>
 		</item>
+		<item label="Mount NAS Public">
+			<action name="Execute">
+				<command>foot -w 800x600 sh -c "sudo /sbin/mount.cifs //192.168.1.5/s_public /mnt/m_nas_public -o username=vibri,domain=WORKGROUP,vers=3.11,sec=ntlmssp,rw,uid=1000,gid=1000,file_mode=0644,dir_mode=0755,noperm,mfsymlinks,_netdev"</command>
+			</action>
+		</item>
+		<item label="Mount NAS Private">
+			<action name="Execute">
+				<command>foot -w 800x600 sh -c "sudo /sbin/mount.cifs //192.168.1.5/s_private /mnt/m_nas_private -o username=vibri,domain=WORKGROUP,vers=3.11,sec=ntlmssp,rw,uid=1000,gid=1000,file_mode=0644,dir_mode=0755,noperm,mfsymlinks,_netdev"</command>
+			</action>
+		</item>
 		
 		<menu id="m_eject_device" label="Eject media">
 			<item label="Eject sdb1">
@@ -536,6 +546,11 @@
 				<command>foot -w 1920x1080 -H sh -c "lsof"</command>
 			</action>
 		</item>
+		<item label="Locate Duplicates (home)">
+			<action name="Execute">
+				<command>foot -w 1920x1080 -H sh -c "fdupes ~/ -r -1 -t"</command>
+			</action>
+		</item>
 		<separator />
 		
 		<!-- other -->
@@ -626,7 +641,7 @@
 			<action name="Execute" command="None" />
 		</item>
 		<item label="Start ai llm (ollama)">
-			<action name="Execute" command="None" />
+			<action name="Execute" command="ollama serve" />
 		</item>
 		
 		<separator />
@@ -754,19 +769,22 @@
 	
 	
 	<item label="Lock">
-		<action name="Execute" command="swaylock" />
+		<action name="Execute" command="swaylock -u -f -c 000000" />
 	</item>  
 	
 	<menu id="m_power" label="Power">
 		<item label="Exit">
 			<action name="Exit"/>
-		</item>	
+		</item>
+		<item label="Suspend">
+			<action name="Execute" command="systemctl suspend" />	
+		</item>
 		<item label="Reboot">
 			<action name="Execute" command="sreboot" />	
-		</item>	
+		</item>
 		<item label="Shutdown">
 			<action name="Execute" command="sshutdown" />
-		</item>	
+		</item>
 	</menu>
 	
 </menu>
